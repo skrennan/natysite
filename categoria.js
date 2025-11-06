@@ -23,7 +23,15 @@ Promise.all([
   const items = products.filter(p => 
     (p.categorySlug || '').toLowerCase() === slug.toLowerCase() || p.category === cat.label
   );
-  render(items);
+  render(items)
+    if (item.image) {
+  const img = document.createElement('img');
+  img.src = item.image;
+  img.alt = item.title;
+  img.className = 'item-img';
+  it.prepend(img);
+
+  };
 });
 
 function render(items){
