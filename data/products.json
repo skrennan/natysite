@@ -1,1 +1,29 @@
-[]
+[
+{
+  "id": "abc123",
+  "title": "Tênis leve",
+  "category": "ROUPAS E ACESSÓRIOS",
+  "categorySlug": "roupas-e-acessorios",
+  "price": "R$ 129,90",
+  "primaryLink": "https://sualoja.com/item",
+  "links": {
+    "shopee": "https://shopee...",
+    "aliexpress": "https://aliexpress...",
+    "amazon": "https://amazon..."
+  }
+},
+{
+  "id": "RECONQUISTE SEU AMOR EM 8 SEMANAS",
+  "title": "Livro autoral",
+  "category": "LIVROS DIGITAIS",
+  "categorySlug": "livros-digitais",
+  "price": "R$ 39,99",
+  "primaryLink": "https://go.hotmart.com/A102780671T",
+  "image":"https://static-media.hotmart.com/z0e9nN1H1uGfN0wN79MxVLyTirs=/300x300/smart/filters:format(webp):background_color(white)/hotmart/product_pictures/6a1603c4-ceac-40d5-b50c-f5960e21043a/PremiumEbookamordevolta.png?w=920",
+  "links": {
+    "shopee": "https://shopee...",
+    "aliexpress": "https://aliexpress...",
+    "amazon": "https://amazon..."
+  }
+}
+]
