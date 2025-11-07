@@ -1,3 +1,4 @@
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const listEl = document.getElementById('list');
@@ -23,15 +24,7 @@ Promise.all([
   const items = products.filter(p => 
     (p.categorySlug || '').toLowerCase() === slug.toLowerCase() || p.category === cat.label
   );
-  render(items)
-    if (item.image) {
-  const img = document.createElement('img');
-  img.src = item.image;
-  img.alt = item.title;
-  img.className = 'item-img';
-  it.prepend(img);
-
-  };
+  render(items);
 });
 
 function render(items){
@@ -42,17 +35,52 @@ function render(items){
   }
   items.forEach(item => {
     const it = document.createElement('div'); it.className='item';
-    const t  = document.createElement('div'); t.className='item-title'; t.textContent=item.title;
+
+    // preview image (optional)
+    if (item.image) {
+      const img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.title || '';
+      img.className = 'item-img';
+      it.appendChild(img);
+    }
+
+    const t  = document.createElement('div'); t.className='item-title'; t.textContent=item.title || '';
     const meta = document.createElement('div'); meta.className='item-meta';
-    const c = document.createElement('span'); c.textContent=item.category||'';
-    const p = document.createElement('span'); p.textContent=item.price||'';
+    const c = document.createElement('span'); c.textContent=item.category || '';
+    const p = document.createElement('span'); p.textContent=item.price || '';
     meta.append(c,p);
 
     const actions = document.createElement('div'); actions.className='item-actions';
-    const a = document.createElement('a'); a.className='btn'; a.textContent='Ver na loja';
-    a.href = item.primaryLink || (item.links ? Object.values(item.links).find(Boolean) : '#');
-    a.target='_blank'; a.rel='nofollow noopener';
-    actions.appendChild(a);
+
+    // Primary "Ver na loja" (falls back to first available)
+    const primaryUrl = item.primaryLink || (item.links ? Object.values(item.links).find(Boolean) : '');
+    if (primaryUrl) {
+      const a = document.createElement('a'); a.className='btn primary'; a.textContent='Ver na loja';
+      a.href = primaryUrl; a.target='_blank'; a.rel='nofollow noopener';
+      actions.appendChild(a);
+    }
+
+    // Store-specific buttons when available
+    if (item.links && typeof item.links === 'object') {
+      const map = [
+        ['shopee','Shopee','btn store shopee'],
+        ['aliexpress','AliExpress','btn store aliexpress'],
+        ['amazon','Amazon','btn store amazon']
+      ];
+      map.forEach(([key,label,cls]) => {
+        const url = item.links[key];
+        if (url) {
+          const b = document.createElement('a');
+          b.className = cls;
+          b.textContent = label;
+          b.href = url;
+          b.target = '_blank';
+          b.rel = 'nofollow noopener';
+          actions.appendChild(b);
+        }
+      });
+    }
 
     it.append(t, meta, actions);
     listEl.appendChild(it);

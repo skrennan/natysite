@@ -1,29 +1,58 @@
 [
-{
-  "id": "abc123",
-  "title": "Tênis leve",
-  "category": "ROUPAS E ACESSÓRIOS",
-  "categorySlug": "roupas-e-acessorios",
-  "price": "R$ 129,90",
-  "primaryLink": "https://sualoja.com/item",
-  "links": {
-    "shopee": "https://shopee...",
-    "aliexpress": "https://aliexpress...",
-    "amazon": "https://amazon..."
+  {
+    "id": "p1",
+    "title": "Difusor Aromático Minimalista",
+    "category": "CASA E DECORAÇÃO",
+    "categorySlug": "casa-e-decoracao",
+    "price": "R$ 49,90",
+    "primaryLink": "https://shopee.com/product123",
+    "image": "https://images.unsplash.com/photo-1590080875831-6d61b1a0c9f8?q=80&w=800&auto=format&fit=crop",
+    "links": {
+      "shopee": "https://shopee.com/product123",
+      "aliexpress": "https://aliexpress.com/item/abc",
+      "amazon": ""
+    }
+  },
+  {
+    "id": "p2",
+    "title": "Kit Pincéis de Maquiagem 12pçs",
+    "category": "BELEZA",
+    "categorySlug": "beleza",
+    "price": "R$ 69,90",
+    "primaryLink": "https://aliexpress.com/item/xyz",
+    "image": "https://images.unsplash.com/photo-1512495039889-52a3b799c9a3?q=80&w=800&auto=format&fit=crop",
+    "links": {
+      "shopee": "",
+      "aliexpress": "https://aliexpress.com/item/xyz",
+      "amazon": "https://amazon.com/dp/000000"
+    }
+  },
+  {
+    "id": "p3",
+    "title": "Camiseta Oversized Unissex",
+    "category": "ROUPAS E ACESSÓRIOS",
+    "categorySlug": "roupas-e-acessorios",
+    "price": "R$ 39,90",
+    "primaryLink": "https://amazon.com/dp/111111",
+    "image": "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=800&auto=format&fit=crop",
+    "links": {
+      "shopee": "https://shopee.com/it-555",
+      "aliexpress": "",
+      "amazon": "https://amazon.com/dp/111111"
+    }
+  },
+  {
+    "id": "p4",
+    "title": "Seu amor de volta em 8 semanas",
+    "category": "LIVROS DIGITAIS",
+    "categorySlug": "livros-digitais",
+    "price": "R$ 39,90",
+    "primaryLink": "https://hotmart.com/pt-br/marketplace/produtos/seu-amor-de-volta-em-8-semanas/A102780671T",
+    "image": "https://static-media.hotmart.com/Pk8wrovmSjPZEuKjjSSxJ-Cqgnk=/300x300/smart/filters:format(webp):background_color(white)/hotmart/product_pictures/618f3ec3-9864-491f-9a46-26d6b8af15e0/Ebookseuamordevoltaem8semanaslight.png?w=920",
+    "links": {
+      "shopee": "",
+      "aliexpress": "",
+      "amazon": ""
+    }
   }
-},
-{
-  "id": "RECONQUISTE SEU AMOR EM 8 SEMANAS",
-  "title": "Livro autoral",
-  "category": "LIVROS DIGITAIS",
-  "categorySlug": "livros-digitais",
-  "price": "R$ 39,99",
-  "primaryLink": "https://go.hotmart.com/A102780671T",
-  "image":"https://hotmart.s3.amazonaws.com/product_pictures/b28b8e15-6137-4426-998d-8914199ddad5/10Passosparatrazerseuamordevolta.jpeg",
-  "links": {
-    "shopee": "https://shopee...",
-    "aliexpress": "https://aliexpress...",
-    "amazon": "https://amazon..."
-  }
-}
 ]

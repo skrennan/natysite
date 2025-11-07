@@ -1,3 +1,4 @@
+
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 :root{
@@ -22,14 +23,26 @@ body{background:radial-gradient(1100px 700px at 50% -10%, #1b1140, #0f0a1a);colo
 .bar h1{font-size:18px;margin:0;font-weight:900}
 .back{color:var(--ink);text-decoration:none;font-size:18px;padding:4px 8px;border:1px solid var(--line);border-radius:10px}
 .cat-desc{color:var(--muted);font-size:14px;margin-bottom:12px}
-.list{display:grid;gap:10px}
-.item{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:6px}
+.list{display:grid;gap:12px}
+
+/* Product card */
+.item{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:16px;padding:12px;display:grid;gap:8px}
+.item-img{width:100%;border-radius:12px;margin-bottom:4px;object-fit:cover;max-height:220px}
 .item-title{font-weight:800}
-.item-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+.item-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;gap:8px;flex-wrap:wrap}
+
 .item-actions{display:flex;gap:8px;flex-wrap:wrap}
 .btn{display:inline-block;text-decoration:none;background:var(--brand-2);color:#fff;padding:10px 12px;border-radius:12px;font-weight:800}
+.btn.store{font-weight:700;padding:8px 10px;border-radius:10px}
+.btn.primary{background:var(--brand-2)}
+.btn.shopee{background:#ee4d2d}
+.btn.aliexpress{background:#ff6a00}
+.btn.amazon{background:#232f3e}
+
 .footer{color:var(--muted);text-align:center;padding:14px 0}
 .input, input[type="search"], input[type="text"], input[type="password"], textarea{background:#fff;color:#111;border:1px solid #d0d0d0;border-radius:12px;padding:10px 12px}
+
+/* Category color classes */
 .casa{ background: linear-gradient(180deg, #301a57, #251646); }
 .beleza{ background: linear-gradient(180deg, #3a1b4d, #2c123d); }
 .roupas{ background: linear-gradient(180deg, #361a64, #2b1350); }
